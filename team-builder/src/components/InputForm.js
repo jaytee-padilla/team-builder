@@ -17,7 +17,7 @@ export default function InputForm(props) {
 					<input type="text" name="role" placeholder="Role" value={props.teamMember.role} onChange={props.onChangeHandler} />
 				</label>
 
-				<button>Add Member</button>
+				{props.isEditing ? <button type="button" onClick={(event) => props.updateHandler(event, props.teamMember)}>Update Member</button> : <button>Add Member</button>}
 			</form>
 		</div>
 	)

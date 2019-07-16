@@ -9,7 +9,7 @@ export default function TeamList(props) {
 						<p>Name: {teamMember.name}</p>
 						<p>Email: {teamMember.email}</p>
 						<p>Role: {teamMember.role}</p>
-						<button onClick={(event) => props.updateHandler(event, teamMember)}>Update</button>
+						<button disabled={props.isEditing} onClick={(event) => props.updateHandler(event, teamMember)}>Update</button>
 						<hr />
 					</div>
 				)
